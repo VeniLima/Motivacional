@@ -25,5 +25,11 @@ const phrases = [
 function sendMessage() {
   const totalPhrases = phrases.length;
   const random = Math.floor(Math.random() * totalPhrases);
+
   document.querySelector("#message").innerHTML = phrases[random];
+
+  document.querySelector("#message").style.opacity = 1;
+  setTimeout(function () {
+    document.querySelector("#message").style.opacity = 0;
+  }, 3000);
 }
