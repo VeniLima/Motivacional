@@ -8,7 +8,7 @@ const phrases = [
   "Você é mais fraco do que pensa.",
   "Nunca foi azar, sempre foi incompetência.",
   "Não pare, faça até dar errado.",
-  "Acredite. Você nasceu para conquistar grander fracassos.",
+  "Acredite. Você nasceu para conquistar grandes fracassos.",
   "Você NÃO é incrível.",
   "Coisas ruins se vão para que piores possam vir.",
   "Seu maior problema é você.",
@@ -19,7 +19,7 @@ const phrases = [
   "Nunca é tarde para desistir.",
   "Você não pode mudar o seu passado. Mas pode estragar o seu futuro.",
   "O recomeço é uma oportunidade de um novo fracasso",
-  "Durmam 12 horas por dia, assim as chances de fazer merda caem pela metade",
+  "Durma 12 horas por dia, assim as chances de fazer merda caem pela metade",
 ];
 
 function sendMessage() {
@@ -28,8 +28,11 @@ function sendMessage() {
 
   document.querySelector("#message").innerHTML = phrases[random];
 
+  document.querySelector("#button").disabled = true;
+
   document.querySelector("#message").style.opacity = 1;
   setTimeout(function () {
     document.querySelector("#message").style.opacity = 0;
+    document.querySelector("#button").disabled = false;
   }, 3000);
 }
