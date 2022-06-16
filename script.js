@@ -3,7 +3,7 @@ const phrases = [
   "Lute como nunca, perca como sempre.",
   "Nenhum obstáculo é grande para quem desiste.",
   "O caminho é longo, mas a derrota é certa.",
-  "É só uma fase ruim, logo vai piorar.",
+  "Não é só uma fase ruim, logo vai piorar.",
   "Seja o protagonista do seu fracasso.",
   "Você é mais fraco do que pensa.",
   "Nunca foi azar, sempre foi incompetência.",
@@ -22,17 +22,23 @@ const phrases = [
   "Durma 12 horas por dia, assim as chances de fazer merda caem pela metade",
 ];
 
+window.onload = () => {
+  message = document.querySelector("#message");
+  button = document.querySelector("#button");
+};
+
 function sendMessage() {
   const totalPhrases = phrases.length;
   const random = Math.floor(Math.random() * totalPhrases);
 
-  document.querySelector("#message").innerHTML = phrases[random];
+  message.innerHTML = phrases[random];
 
-  document.querySelector("#button").disabled = true;
+  //button.disabled = true;
 
-  document.querySelector("#message").style.opacity = 1;
-  setTimeout(function () {
-    document.querySelector("#message").style.opacity = 0;
-    document.querySelector("#button").disabled = false;
+  //message.style.opacity = 1;
+  /*setTimeout(function () {
+    message.style.opacity = 0;
+    button.disabled = false;
   }, 3000);
+  */
 }
